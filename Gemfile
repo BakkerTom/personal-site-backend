@@ -19,6 +19,8 @@ gem "feedjira"
 
 gem "httparty"
 
+gem "public_suffix"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
