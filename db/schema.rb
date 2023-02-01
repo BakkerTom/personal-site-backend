@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_18_221520) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_01_230921) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,6 +40,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_18_221520) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["letterboxd_id"], name: "index_movies_on_letterboxd_id"
+  end
+
+  create_table "travels", force: :cascade do |t|
+    t.string "city"
+    t.string "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
