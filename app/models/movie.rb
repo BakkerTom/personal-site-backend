@@ -1,7 +1,7 @@
 class Movie < ApplicationRecord
   after_create :track_activity
 
-  has_one :activity, as: :content
+  has_one :activity, as: :content, dependent: :destroy
 
   def self.update_from_letterboxd
     xml = HTTParty.get('https://letterboxd.com/bakkertom/rss/').body
